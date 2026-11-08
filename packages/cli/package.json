@@ -1,0 +1,14 @@
+{
+  "name": "@float-community/cli",
+  "version": "0.2.0",
+  "description": "Command-line tools for Float coins: pool status, quotes, fee-cycle previews, holder/payout/burn audits and airdrop ranking.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "float": "./src/main.ts"
+  },
+  "dependencies": {
+    "@float-community/sdk": "0.2.0"
+  },
+  "engines": { "node": ">=22.18" }
+}

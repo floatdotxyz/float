@@ -1,0 +1,2180 @@
+{
+  "address": "AYBmMVxnWC2o5JGPZm8xo4nrh7fAmxLfrxC3e2RaKomt",
+  "metadata": {
+    "name": "float_router",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Community reference implementation of Float's fee router"
+  },
+  "instructions": [
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "InitializeParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "update_config",
+      "discriminator": [
+        29,
+        158,
+        252,
+        191,
+        10,
+        83,
+        219,
+        99
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "UpdateConfigParams"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "set_paused",
+      "discriminator": [
+        91,
+        60,
+        125,
+        192,
+        176,
+        225,
+        166,
+        218
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "paused",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "propose_admin",
+      "discriminator": [
+        121,
+        214,
+        199,
+        212,
+        87,
+        39,
+        117,
+        234
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "new_admin",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "accept_admin",
+      "discriminator": [
+        112,
+        42,
+        45,
+        90,
+        116,
+        181,
+        13,
+        170
+      ],
+      "accounts": [
+        {
+          "name": "pending_admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "init_mint_vaults",
+      "discriminator": [
+        25,
+        39,
+        248,
+        194,
+        142,
+        95,
+        173,
+        253
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "holders_vault",
+          "writable": true
+        },
+        {
+          "name": "flagship_vault",
+          "writable": true
+        },
+        {
+          "name": "traders_vault",
+          "writable": true
+        },
+        {
+          "name": "intake",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "register_coin",
+      "discriminator": [
+        79,
+        37,
+        188,
+        46,
+        209,
+        104,
+        90,
+        10
+      ],
+      "accounts": [
+        {
+          "name": "launcher",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true
+        },
+        {
+          "name": "coin_mint"
+        },
+        {
+          "name": "paired_mint"
+        },
+        {
+          "name": "launchlab_pool"
+        },
+        {
+          "name": "ticker_record",
+          "writable": true
+        },
+        {
+          "name": "coin_record",
+          "writable": true
+        },
+        {
+          "name": "ticker_escrow",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "ticker",
+          "type": "string"
+        },
+        {
+          "name": "creator_wallet",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "mark_graduated",
+      "discriminator": [
+        125,
+        72,
+        57,
+        129,
+        59,
+        15,
+        247,
+        251
+      ],
+      "accounts": [
+        {
+          "name": "coin_record",
+          "writable": true
+        },
+        {
+          "name": "launchlab_pool"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "settle_ticker_fee",
+      "discriminator": [
+        24,
+        109,
+        139,
+        209,
+        46,
+        122,
+        2,
+        25
+      ],
+      "accounts": [
+        {
+          "name": "config"
+        },
+        {
+          "name": "coin_record",
+          "writable": true
+        },
+        {
+          "name": "ticker_escrow",
+          "writable": true
+        },
+        {
+          "name": "launcher",
+          "writable": true
+        },
+        {
+          "name": "treasury",
+          "writable": true
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "cycle_launchlab",
+      "discriminator": [
+        18,
+        125,
+        192,
+        206,
+        141,
+        104,
+        66,
+        153
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "authority",
+          "writable": true
+        },
+        {
+          "name": "coin_record",
+          "writable": true
+        },
+        {
+          "name": "launchlab_pool",
+          "writable": true
+        },
+        {
+          "name": "launchlab_platform_config"
+        },
+        {
+          "name": "launchlab_authority",
+          "address": "WLHv2UAZm6z4KyaaELi5pjdbJh6RESMva1Rnn8pJVVh"
+        },
+        {
+          "name": "pool_quote_vault",
+          "writable": true
+        },
+        {
+          "name": "launchlab_program",
+          "address": "LanMV9sAd7wArD4vJFi2qDdfnVhFxYSUg6eADduJ3uj"
+        },
+        {
+          "name": "paired_mint"
+        },
+        {
+          "name": "intake",
+          "writable": true
+        },
+        {
+          "name": "holders_vault",
+          "writable": true
+        },
+        {
+          "name": "flagship_vault",
+          "writable": true
+        },
+        {
+          "name": "traders_vault",
+          "writable": true
+        },
+        {
+          "name": "creator_token",
+          "writable": true
+        },
+        {
+          "name": "treasury_token",
+          "writable": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "cycle_cpmm",
+      "discriminator": [
+        252,
+        83,
+        23,
+        118,
+        197,
+        157,
+        169,
+        44
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "authority",
+          "writable": true
+        },
+        {
+          "name": "coin_record",
+          "writable": true
+        },
+        {
+          "name": "cpmm_pool",
+          "writable": true
+        },
+        {
+          "name": "amm_config"
+        },
+        {
+          "name": "cpmm_authority",
+          "address": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL"
+        },
+        {
+          "name": "token_0_vault",
+          "writable": true
+        },
+        {
+          "name": "token_1_vault",
+          "writable": true
+        },
+        {
+          "name": "vault_0_mint"
+        },
+        {
+          "name": "vault_1_mint"
+        },
+        {
+          "name": "authority_token_0",
+          "writable": true
+        },
+        {
+          "name": "authority_token_1",
+          "writable": true
+        },
+        {
+          "name": "token_0_program"
+        },
+        {
+          "name": "token_1_program"
+        },
+        {
+          "name": "cpmm_program",
+          "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C"
+        },
+        {
+          "name": "holders_vault",
+          "writable": true
+        },
+        {
+          "name": "flagship_vault",
+          "writable": true
+        },
+        {
+          "name": "traders_vault",
+          "writable": true
+        },
+        {
+          "name": "creator_token",
+          "writable": true
+        },
+        {
+          "name": "treasury_token",
+          "writable": true
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "swap_base_fees",
+      "discriminator": [
+        222,
+        11,
+        184,
+        175,
+        62,
+        137,
+        81,
+        95
+      ],
+      "accounts": [
+        {
+          "name": "operator",
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "coin_record",
+          "writable": true
+        },
+        {
+          "name": "coin_mint"
+        },
+        {
+          "name": "paired_mint"
+        },
+        {
+          "name": "coin_token",
+          "writable": true
+        },
+        {
+          "name": "intake",
+          "writable": true
+        },
+        {
+          "name": "cpmm_pool",
+          "writable": true
+        },
+        {
+          "name": "amm_config"
+        },
+        {
+          "name": "cpmm_authority",
+          "address": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL"
+        },
+        {
+          "name": "input_vault",
+          "writable": true
+        },
+        {
+          "name": "output_vault",
+          "writable": true
+        },
+        {
+          "name": "observation_state",
+          "writable": true
+        },
+        {
+          "name": "cpmm_program",
+          "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C"
+        },
+        {
+          "name": "holders_vault",
+          "writable": true
+        },
+        {
+          "name": "flagship_vault",
+          "writable": true
+        },
+        {
+          "name": "traders_vault",
+          "writable": true
+        },
+        {
+          "name": "creator_token",
+          "writable": true
+        },
+        {
+          "name": "treasury_token",
+          "writable": true
+        },
+        {
+          "name": "coin_token_program"
+        },
+        {
+          "name": "paired_token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount_in",
+          "type": "u64"
+        },
+        {
+          "name": "reference_price_q64",
+          "type": "u128"
+        }
+      ]
+    },
+    {
+      "name": "convert_vault",
+      "discriminator": [
+        231,
+        143,
+        40,
+        60,
+        1,
+        142,
+        246,
+        18
+      ],
+      "accounts": [
+        {
+          "name": "operator",
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "source_mint"
+        },
+        {
+          "name": "target_mint"
+        },
+        {
+          "name": "source_vault",
+          "writable": true
+        },
+        {
+          "name": "target_vault",
+          "writable": true
+        },
+        {
+          "name": "cpmm_pool",
+          "writable": true
+        },
+        {
+          "name": "amm_config"
+        },
+        {
+          "name": "cpmm_authority",
+          "address": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL"
+        },
+        {
+          "name": "input_vault",
+          "writable": true
+        },
+        {
+          "name": "output_vault",
+          "writable": true
+        },
+        {
+          "name": "observation_state",
+          "writable": true
+        },
+        {
+          "name": "cpmm_program",
+          "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C"
+        },
+        {
+          "name": "source_token_program"
+        },
+        {
+          "name": "target_token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "kind",
+          "type": "u8"
+        },
+        {
+          "name": "amount_in",
+          "type": "u64"
+        },
+        {
+          "name": "reference_price_q64",
+          "type": "u128"
+        }
+      ]
+    },
+    {
+      "name": "execute_buyback",
+      "discriminator": [
+        47,
+        32,
+        19,
+        100,
+        184,
+        96,
+        144,
+        49
+      ],
+      "accounts": [
+        {
+          "name": "operator",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "wsol_mint",
+          "address": "So11111111111111111111111111111111111111112"
+        },
+        {
+          "name": "float_mint",
+          "writable": true
+        },
+        {
+          "name": "sol_vault",
+          "writable": true
+        },
+        {
+          "name": "float_intake",
+          "writable": true
+        },
+        {
+          "name": "cpmm_pool",
+          "writable": true
+        },
+        {
+          "name": "amm_config"
+        },
+        {
+          "name": "cpmm_authority",
+          "address": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL"
+        },
+        {
+          "name": "input_vault",
+          "writable": true
+        },
+        {
+          "name": "output_vault",
+          "writable": true
+        },
+        {
+          "name": "observation_state",
+          "writable": true
+        },
+        {
+          "name": "cpmm_program",
+          "address": "CPMMoo8L3F4NbTegBCKVNunggL7H1ZpdTHKxQB5qKP1C"
+        },
+        {
+          "name": "wsol_token_program"
+        },
+        {
+          "name": "float_token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount_in",
+          "type": "u64"
+        },
+        {
+          "name": "reference_price_q64",
+          "type": "u128"
+        }
+      ]
+    },
+    {
+      "name": "payout_holders",
+      "discriminator": [
+        84,
+        122,
+        204,
+        189,
+        204,
+        48,
+        138,
+        97
+      ],
+      "accounts": [
+        {
+          "name": "operator",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "coin_record",
+          "writable": true
+        },
+        {
+          "name": "paired_mint"
+        },
+        {
+          "name": "holders_vault",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "round",
+          "type": "u64"
+        },
+        {
+          "name": "amounts",
+          "type": {
+            "vec": "u64"
+          }
+        }
+      ]
+    },
+    {
+      "name": "create_airdrop",
+      "discriminator": [
+        227,
+        135,
+        208,
+        66,
+        137,
+        177,
+        80,
+        94
+      ],
+      "accounts": [
+        {
+          "name": "operator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "usdc_mint",
+          "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+        },
+        {
+          "name": "traders_vault",
+          "writable": true
+        },
+        {
+          "name": "round",
+          "writable": true
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "round_id",
+          "type": "u64"
+        },
+        {
+          "name": "root",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "total",
+          "type": "u64"
+        },
+        {
+          "name": "expires_at",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "claim_airdrop",
+      "discriminator": [
+        137,
+        50,
+        122,
+        111,
+        89,
+        254,
+        8,
+        20
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "round",
+          "writable": true
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "usdc_mint"
+        },
+        {
+          "name": "wallet"
+        },
+        {
+          "name": "recipient_token",
+          "writable": true
+        },
+        {
+          "name": "receipt",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "round_id",
+          "type": "u64"
+        },
+        {
+          "name": "index",
+          "type": "u64"
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "proof",
+          "type": {
+            "vec": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "close_airdrop",
+      "discriminator": [
+        85,
+        138,
+        99,
+        129,
+        104,
+        203,
+        94,
+        4
+      ],
+      "accounts": [
+        {
+          "name": "operator",
+          "signer": true
+        },
+        {
+          "name": "config"
+        },
+        {
+          "name": "authority"
+        },
+        {
+          "name": "round",
+          "writable": true
+        },
+        {
+          "name": "escrow",
+          "writable": true
+        },
+        {
+          "name": "usdc_mint"
+        },
+        {
+          "name": "traders_vault",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": [
+        {
+          "name": "round_id",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "RouterConfig",
+      "discriminator": [
+        147,
+        20,
+        81,
+        135,
+        46,
+        251,
+        46,
+        139
+      ]
+    },
+    {
+      "name": "CoinRecord",
+      "discriminator": [
+        69,
+        11,
+        66,
+        85,
+        204,
+        175,
+        156,
+        90
+      ]
+    },
+    {
+      "name": "TickerRecord",
+      "discriminator": [
+        98,
+        30,
+        187,
+        162,
+        15,
+        209,
+        205,
+        227
+      ]
+    },
+    {
+      "name": "AirdropRound",
+      "discriminator": [
+        1,
+        98,
+        229,
+        83,
+        110,
+        196,
+        197,
+        66
+      ]
+    },
+    {
+      "name": "ClaimReceipt",
+      "discriminator": [
+        223,
+        233,
+        11,
+        229,
+        124,
+        165,
+        207,
+        28
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "ConfigUpdated",
+      "discriminator": [
+        40,
+        241,
+        230,
+        122,
+        11,
+        19,
+        198,
+        194
+      ]
+    },
+    {
+      "name": "CoinRegistered",
+      "discriminator": [
+        73,
+        189,
+        19,
+        88,
+        236,
+        80,
+        205,
+        170
+      ]
+    },
+    {
+      "name": "CoinGraduated",
+      "discriminator": [
+        23,
+        75,
+        226,
+        161,
+        138,
+        188,
+        129,
+        146
+      ]
+    },
+    {
+      "name": "TickerFeeSettled",
+      "discriminator": [
+        153,
+        149,
+        39,
+        204,
+        175,
+        167,
+        80,
+        26
+      ]
+    },
+    {
+      "name": "FeesCycled",
+      "discriminator": [
+        135,
+        140,
+        228,
+        74,
+        132,
+        29,
+        68,
+        3
+      ]
+    },
+    {
+      "name": "VaultConverted",
+      "discriminator": [
+        95,
+        34,
+        158,
+        254,
+        212,
+        17,
+        8,
+        36
+      ]
+    },
+    {
+      "name": "BuybackBurned",
+      "discriminator": [
+        186,
+        84,
+        241,
+        202,
+        152,
+        185,
+        0,
+        115
+      ]
+    },
+    {
+      "name": "HoldersPaid",
+      "discriminator": [
+        171,
+        76,
+        22,
+        70,
+        62,
+        58,
+        219,
+        83
+      ]
+    },
+    {
+      "name": "AirdropCreated",
+      "discriminator": [
+        190,
+        219,
+        101,
+        33,
+        208,
+        187,
+        149,
+        96
+      ]
+    },
+    {
+      "name": "AirdropClaimed",
+      "discriminator": [
+        125,
+        251,
+        195,
+        183,
+        202,
+        126,
+        89,
+        68
+      ]
+    },
+    {
+      "name": "AirdropClosed",
+      "discriminator": [
+        196,
+        85,
+        30,
+        72,
+        165,
+        151,
+        163,
+        126
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Paused",
+      "msg": "Router is paused"
+    },
+    {
+      "code": 6001,
+      "name": "NotAdmin",
+      "msg": "Signer is not the admin"
+    },
+    {
+      "code": 6002,
+      "name": "NotOperator",
+      "msg": "Signer is not the operator"
+    },
+    {
+      "code": 6003,
+      "name": "NotPendingAdmin",
+      "msg": "Signer is not the pending admin"
+    },
+    {
+      "code": 6004,
+      "name": "InvalidSplit",
+      "msg": "Split must sum to 10000 bps"
+    },
+    {
+      "code": 6005,
+      "name": "InvalidLimit",
+      "msg": "Guard or impact limit out of range"
+    },
+    {
+      "code": 6006,
+      "name": "InvalidTicker",
+      "msg": "Ticker must be 1-10 ASCII letters or digits and passed upper-case"
+    },
+    {
+      "code": 6007,
+      "name": "InvalidLaunchLabPool",
+      "msg": "Account is not a LaunchLab pool for this coin and paired mint"
+    },
+    {
+      "code": 6008,
+      "name": "WrongPlatform",
+      "msg": "LaunchLab pool belongs to a different platform config"
+    },
+    {
+      "code": 6009,
+      "name": "NotPoolCreator",
+      "msg": "Only the LaunchLab pool creator can register the coin"
+    },
+    {
+      "code": 6010,
+      "name": "InvalidCpmmPool",
+      "msg": "Account is not the CPMM pool for this coin"
+    },
+    {
+      "code": 6011,
+      "name": "WrongPoolCreator",
+      "msg": "CPMM pool creator is not the router authority"
+    },
+    {
+      "code": 6012,
+      "name": "NotGraduated",
+      "msg": "Coin has not graduated yet"
+    },
+    {
+      "code": 6013,
+      "name": "AlreadyGraduated",
+      "msg": "Coin already graduated"
+    },
+    {
+      "code": 6014,
+      "name": "AlreadySettled",
+      "msg": "Ticker fee already settled"
+    },
+    {
+      "code": 6015,
+      "name": "SettlementPending",
+      "msg": "Ticker fee settlement window still open"
+    },
+    {
+      "code": 6016,
+      "name": "NoFees",
+      "msg": "No fees to cycle"
+    },
+    {
+      "code": 6017,
+      "name": "MintMismatch",
+      "msg": "Token account mint does not match"
+    },
+    {
+      "code": 6018,
+      "name": "OwnerMismatch",
+      "msg": "Token account owner does not match"
+    },
+    {
+      "code": 6019,
+      "name": "InsufficientFunds",
+      "msg": "Amount exceeds what is available"
+    },
+    {
+      "code": 6020,
+      "name": "LengthMismatch",
+      "msg": "Number of amounts does not match number of recipients"
+    },
+    {
+      "code": 6021,
+      "name": "TooManyRecipients",
+      "msg": "Too many recipients in one instruction"
+    },
+    {
+      "code": 6022,
+      "name": "InvalidConversionTarget",
+      "msg": "Conversion target mint not allowed for this vault kind"
+    },
+    {
+      "code": 6023,
+      "name": "PriceGuard",
+      "msg": "Output below the price-guard minimum"
+    },
+    {
+      "code": 6024,
+      "name": "BuybackNotDue",
+      "msg": "Buyback not due yet"
+    },
+    {
+      "code": 6025,
+      "name": "PriceImpactTooHigh",
+      "msg": "Buyback price impact above limit"
+    },
+    {
+      "code": 6026,
+      "name": "InvalidReserves",
+      "msg": "Invalid pool reserves"
+    },
+    {
+      "code": 6027,
+      "name": "InvalidProof",
+      "msg": "Invalid merkle proof"
+    },
+    {
+      "code": 6028,
+      "name": "ProofTooLong",
+      "msg": "Proof too long"
+    },
+    {
+      "code": 6029,
+      "name": "AirdropClosed",
+      "msg": "Airdrop round closed"
+    },
+    {
+      "code": 6030,
+      "name": "AirdropNotExpired",
+      "msg": "Airdrop round has not expired yet"
+    },
+    {
+      "code": 6031,
+      "name": "AirdropOverClaimed",
+      "msg": "Claims exceed the round total"
+    },
+    {
+      "code": 6032,
+      "name": "InvalidAccountData",
+      "msg": "Invalid account data"
+    },
+    {
+      "code": 6033,
+      "name": "MathOverflow",
+      "msg": "Math overflow"
+    }
+  ],
+  "types": [
+    {
+      "name": "SplitConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "holders",
+            "type": "u16"
+          },
+          {
+            "name": "creator",
+            "type": "u16"
+          },
+          {
+            "name": "flagship",
+            "type": "u16"
+          },
+          {
+            "name": "traders",
+            "type": "u16"
+          },
+          {
+            "name": "treasury",
+            "type": "u16"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RouterConfig",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "pending_admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "operator",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury",
+            "type": "pubkey"
+          },
+          {
+            "name": "flagship_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "launchlab_platform_config",
+            "type": "pubkey"
+          },
+          {
+            "name": "split",
+            "type": {
+              "defined": {
+                "name": "SplitConfig"
+              }
+            }
+          },
+          {
+            "name": "guard_bps",
+            "type": "u16"
+          },
+          {
+            "name": "max_impact_bps",
+            "type": "u16"
+          },
+          {
+            "name": "buyback_target_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "buyback_interval_secs",
+            "type": "i64"
+          },
+          {
+            "name": "last_buyback_ts",
+            "type": "i64"
+          },
+          {
+            "name": "total_burned",
+            "type": "u64"
+          },
+          {
+            "name": "total_sol_spent",
+            "type": "u64"
+          },
+          {
+            "name": "coins_registered",
+            "type": "u64"
+          },
+          {
+            "name": "payout_rounds",
+            "type": "u64"
+          },
+          {
+            "name": "paused",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "authority_bump",
+            "type": "u8"
+          },
+          {
+            "name": "_reserved",
+            "type": {
+              "array": [
+                "u8",
+                64
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoinRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "paired_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "launchlab_pool",
+            "type": "pubkey"
+          },
+          {
+            "name": "launcher",
+            "type": "pubkey"
+          },
+          {
+            "name": "creator_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "ticker",
+            "type": {
+              "array": [
+                "u8",
+                10
+              ]
+            }
+          },
+          {
+            "name": "ticker_len",
+            "type": "u8"
+          },
+          {
+            "name": "launched_at",
+            "type": "i64"
+          },
+          {
+            "name": "graduated_at",
+            "type": "i64"
+          },
+          {
+            "name": "reuse_fee",
+            "type": "u64"
+          },
+          {
+            "name": "reuse_fee_settled",
+            "type": "bool"
+          },
+          {
+            "name": "total_cycled",
+            "type": "u64"
+          },
+          {
+            "name": "total_holders",
+            "type": "u64"
+          },
+          {
+            "name": "total_creator",
+            "type": "u64"
+          },
+          {
+            "name": "total_flagship",
+            "type": "u64"
+          },
+          {
+            "name": "total_traders",
+            "type": "u64"
+          },
+          {
+            "name": "total_treasury",
+            "type": "u64"
+          },
+          {
+            "name": "holders_unpaid",
+            "type": "u64"
+          },
+          {
+            "name": "pending_base_fees",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "_reserved",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "TickerRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "ticker",
+            "type": {
+              "array": [
+                "u8",
+                10
+              ]
+            }
+          },
+          {
+            "name": "ticker_len",
+            "type": "u8"
+          },
+          {
+            "name": "launches",
+            "type": "u32"
+          },
+          {
+            "name": "first_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropRound",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "round_id",
+            "type": "u64"
+          },
+          {
+            "name": "root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "total",
+            "type": "u64"
+          },
+          {
+            "name": "claimed",
+            "type": "u64"
+          },
+          {
+            "name": "claims",
+            "type": "u32"
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "closed",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "escrow_bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ClaimReceipt",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "round_id",
+            "type": "u64"
+          },
+          {
+            "name": "index",
+            "type": "u64"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "claimed_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "InitializeParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "operator",
+            "type": "pubkey"
+          },
+          {
+            "name": "treasury",
+            "type": "pubkey"
+          },
+          {
+            "name": "flagship_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "launchlab_platform_config",
+            "type": "pubkey"
+          },
+          {
+            "name": "split",
+            "type": {
+              "defined": {
+                "name": "SplitConfig"
+              }
+            }
+          },
+          {
+            "name": "guard_bps",
+            "type": "u16"
+          },
+          {
+            "name": "max_impact_bps",
+            "type": "u16"
+          },
+          {
+            "name": "buyback_target_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "buyback_interval_secs",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UpdateConfigParams",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "operator",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "treasury",
+            "type": {
+              "option": "pubkey"
+            }
+          },
+          {
+            "name": "split",
+            "type": {
+              "option": {
+                "defined": {
+                  "name": "SplitConfig"
+                }
+              }
+            }
+          },
+          {
+            "name": "guard_bps",
+            "type": {
+              "option": "u16"
+            }
+          },
+          {
+            "name": "max_impact_bps",
+            "type": {
+              "option": "u16"
+            }
+          },
+          {
+            "name": "buyback_target_lamports",
+            "type": {
+              "option": "u64"
+            }
+          },
+          {
+            "name": "buyback_interval_secs",
+            "type": {
+              "option": "i64"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ConfigUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "operator",
+            "type": "pubkey"
+          },
+          {
+            "name": "paused",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoinRegistered",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "paired_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "ticker",
+            "type": "string"
+          },
+          {
+            "name": "launcher",
+            "type": "pubkey"
+          },
+          {
+            "name": "creator_wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "reuse_fee",
+            "type": "u64"
+          },
+          {
+            "name": "launch_index",
+            "type": "u32"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoinGraduated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "graduated_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TickerFeeSettled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "refunded",
+            "type": "bool"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FeesCycled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "paired_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "source",
+            "type": "u8"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "holders",
+            "type": "u64"
+          },
+          {
+            "name": "creator",
+            "type": "u64"
+          },
+          {
+            "name": "flagship",
+            "type": "u64"
+          },
+          {
+            "name": "traders",
+            "type": "u64"
+          },
+          {
+            "name": "treasury",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VaultConverted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "kind",
+            "type": "u8"
+          },
+          {
+            "name": "from_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "to_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount_in",
+            "type": "u64"
+          },
+          {
+            "name": "amount_out",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuybackBurned",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "sol_in",
+            "type": "u64"
+          },
+          {
+            "name": "float_burned",
+            "type": "u64"
+          },
+          {
+            "name": "total_burned",
+            "type": "u64"
+          },
+          {
+            "name": "trigger",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HoldersPaid",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "round",
+            "type": "u64"
+          },
+          {
+            "name": "recipients",
+            "type": "u16"
+          },
+          {
+            "name": "total",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropCreated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "round_id",
+            "type": "u64"
+          },
+          {
+            "name": "root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "total",
+            "type": "u64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropClaimed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "round_id",
+            "type": "u64"
+          },
+          {
+            "name": "index",
+            "type": "u64"
+          },
+          {
+            "name": "wallet",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AirdropClosed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "round_id",
+            "type": "u64"
+          },
+          {
+            "name": "returned",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}

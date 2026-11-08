@@ -1,0 +1,8 @@
+# Sample input for `float airdrop --trades examples/trades.sample.csv --round 2`
+# timestamp: ISO-8601 or unix milliseconds; volume_usd: USD notional of the trade
+wallet,coin,pair,side,timestamp,volume_usd,signature
+9hEQEXbyL2QhhDJVXtDumgDXhR6XepoD8r1J9ZdacbNj,PEPE,SOL,buy,2026-11-05T14:02:11Z,1250.40,
+9hEQEXbyL2QhhDJVXtDumgDXhR6XepoD8r1J9ZdacbNj,PEPE,SOL,sell,2026-11-06T09:41:03Z,1388.10,
+HkTr5Y6yZ4qzxjJQgVZsWA7cVrqw1kXoaTwgbqS38KbX,ROCKET,USDC,buy,2026-11-05T18:20:45Z,640.00,
+HkTr5Y6yZ4qzxjJQgVZsWA7cVrqw1kXoaTwgbqS38KbX,ROCKET,USDC,sell,2026-11-05T18:21:01Z,638.90,
+BtWRBDqc4WCdXdT5H3Vc7J9bTshjP6Bm4cM7bxgGU4s1,MOON,SOL,buy,2026-11-07T22:15:00Z,310.25,

@@ -1,0 +1,14 @@
+{
+  "name": "@float-community/sdk",
+  "version": "0.2.0",
+  "description": "Zero-dependency TypeScript SDK for Float coins on Solana: Raydium LaunchLab, CPMM and Burn & Earn integration plus Float's fee split, rewards and ticker rules.",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts",
+    "./idl/*": "./idl/*"
+  },
+  "files": ["src", "idl", "README.md"],
+  "engines": { "node": ">=22.18" },
+  "keywords": ["solana", "float", "raydium", "launchlab", "cpmm", "memecoin", "sdk"]
+}

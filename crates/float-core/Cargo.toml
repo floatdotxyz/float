@@ -1,0 +1,17 @@
+[package]
+name = "float-core"
+version = "0.1.0"
+edition = "2021"
+description = "Dependency-free, no_std core math and rules for Float coins: fee split, tickers, buyback sizing, price guard, merkle airdrops."
+license = "MIT"
+repository = "https://github.com/float-community/float-community"
+readme = "README.md"
+keywords = ["solana", "float", "raydium", "defi", "no-std"]
+categories = ["no-std", "cryptography::cryptocurrencies"]
+
+[lib]
+name = "float_core"
+
+[dependencies]
+
+[dev-dependencies]
