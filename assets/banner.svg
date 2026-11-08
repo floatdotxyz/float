@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-label="float-community: docs, SDK, CLI and on-chain programs for Float on Solana">
+  <title>float-community</title>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5EEAD4"/><stop offset=".5" stop-color="#38BDF8"/><stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111B3A"/><stop offset="1" stop-color="#070C1C"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5EEAD4"/><stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#060A14"/><stop offset="1" stop-color="#0D1530"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+    <radialGradient id="glowA"><stop offset="0" stop-color="#38BDF8" stop-opacity=".45"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowB"><stop offset="0" stop-color="#818CF8" stop-opacity=".40"/><stop offset="1" stop-color="#818CF8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="core"><stop offset="0" stop-color="#5EEAD4" stop-opacity=".9"/><stop offset="1" stop-color="#38BDF8" stop-opacity=".15"/></radialGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#BFD3F5"/></linearGradient>
+    <clipPath id="frame"><rect width="1280" height="440" rx="22"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1280" height="440" fill="url(#bg)"/>
+    <rect width="1280" height="440" fill="url(#grid)"/>
+    <circle cx="1020" cy="120" r="260" fill="url(#glowA)"><animate attributeName="cx" values="1020;960;1020" dur="14s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="420" r="300" fill="url(#glowB)"><animate attributeName="cy" values="420;380;420" dur="11s" repeatCount="indefinite"/></circle>
+
+    <g fill="none" stroke-width="2">
+      <path d="M-40 392 q80-26 160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0" stroke="#5EEAD4" stroke-opacity=".18">
+        <animateTransform attributeName="transform" type="translate" values="0 0;-160 0" dur="9s" repeatCount="indefinite"/></path>
+      <path d="M-40 408 q80-22 160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0 t160 0" stroke="#818CF8" stroke-opacity=".16">
+        <animateTransform attributeName="transform" type="translate" values="-160 0;0 0" dur="12s" repeatCount="indefinite"/></path>
+    </g>
+
+    
+  <g transform="translate(92 84) scale(0.75)">
+    <rect x="0" y="0" width="128" height="128" rx="30" fill="url(#tile)"/>
+    <rect x="1" y="1" width="126" height="126" rx="29" fill="none" stroke="url(#edge)" stroke-opacity=".55" stroke-width="2"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 0 -5; 0 0" dur="3.2s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1; .45 0 .55 1"/>
+      <circle cx="64" cy="50" r="19" fill="url(#brand)"/>
+      <path d="M45 50a19 19 0 0 0 38 0" fill="#060A14" fill-opacity=".28"/>
+      <circle cx="58" cy="43" r="5" fill="#fff" fill-opacity=".55"/>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-width="7">
+      <path d="M22 82 q10.5-9 21 0 t21 0 t21 0 t21 0" stroke="#5EEAD4"/>
+      <path d="M22 97 q10.5-9 21 0 t21 0 t21 0 t21 0" stroke="#38BDF8" stroke-opacity=".75"/>
+      <path d="M22 112 q10.5-9 21 0 t21 0 t21 0 t21 0" stroke="#818CF8" stroke-opacity=".5"/>
+    </g>
+  </g>
+    <text x="210" y="136" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="58" font-weight="800" letter-spacing="-1.5" fill="url(#title)">float-community</text>
+    <text x="212" y="172" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" fill="#8A97B1">Docs, SDK, CLI and on-chain programs for Float on Solana</text>
+    <text x="92" y="232" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#C9D5EA">Every coin's fees, split five ways: holders, creator, $FLOAT burns,</text>
+    <text x="92" y="258" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="17" fill="#C9D5EA">top traders and the treasury. Routed through Raydium LaunchLab &amp; CPMM.</text>
+    <text x="92" y="298" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#5F6E8C" letter-spacing="1.6">UNOFFICIAL · COMMUNITY-MAINTAINED · MIT</text>
+    <g transform="translate(92 318)"><rect width="52" height="30" rx="15" fill="#0E1838" stroke="#22305A"/><text x="26" y="20" text-anchor="middle" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B9C6DE">Docs</text></g><g transform="translate(154.4 318)"><rect width="138" height="30" rx="15" fill="#0E1838" stroke="#22305A"/><text x="69" y="20" text-anchor="middle" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B9C6DE">TypeScript SDK</text></g><g transform="translate(302.79999999999995 318)"><rect width="44" height="30" rx="15" fill="#0E1838" stroke="#22305A"/><text x="22" y="20" text-anchor="middle" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B9C6DE">CLI</text></g><g transform="translate(356.59999999999997 318)"><rect width="138" height="30" rx="15" fill="#0E1838" stroke="#22305A"/><text x="69" y="20" text-anchor="middle" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B9C6DE">Anchor program</text></g><g transform="translate(504.99999999999994 318)"><rect width="95" height="30" rx="15" fill="#0E1838" stroke="#22305A"/><text x="48" y="20" text-anchor="middle" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B9C6DE">Rust core</text></g><g transform="translate(610.4 318)"><rect width="52" height="30" rx="15" fill="#0E1838" stroke="#22305A"/><text x="26" y="20" text-anchor="middle" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" fill="#B9C6DE">Bots</text></g>
+
+    <path id="p0" d="M951 228 C 1045 228, 1020 92, 1096 92" stroke="#5EEAD4" stroke-opacity=".38" stroke-width="2" fill="none"/><path id="p1" d="M951 228 C 1045 228, 1020 160, 1096 160" stroke="#FBBF24" stroke-opacity=".38" stroke-width="2" fill="none"/><path id="p2" d="M951 228 C 1045 228, 1020 228, 1096 228" stroke="#F472B6" stroke-opacity=".38" stroke-width="2" fill="none"/><path id="p3" d="M951 228 C 1045 228, 1020 296, 1096 296" stroke="#38BDF8" stroke-opacity=".38" stroke-width="2" fill="none"/><path id="p4" d="M951 228 C 1045 228, 1020 364, 1096 364" stroke="#A78BFA" stroke-opacity=".38" stroke-width="2" fill="none"/>
+    <circle r="3.6" fill="#5EEAD4">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p0"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="0.00s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#5EEAD4">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="1.10s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p0"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="1.10s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#5EEAD4">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="2.20s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p0"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="2.20s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#FBBF24">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="0.37s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p1"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="0.37s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#FBBF24">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="1.47s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p1"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="1.47s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#FBBF24">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="2.57s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p1"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="2.57s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#F472B6">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="0.74s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p2"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="0.74s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#F472B6">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="1.84s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p2"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="1.84s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#F472B6">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="2.94s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p2"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="2.94s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#38BDF8">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="1.11s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p3"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="1.11s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#38BDF8">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="2.21s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p3"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="2.21s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#38BDF8">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="3.31s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p3"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="3.31s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#A78BFA">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="1.48s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p4"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="1.48s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#A78BFA">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="2.58s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p4"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="2.58s" repeatCount="indefinite"/>
+    </circle><circle r="3.6" fill="#A78BFA">
+      <animateMotion dur="3.3s" repeatCount="indefinite" begin="3.68s" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".4 0 .6 1"><mpath href="#p4"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.3s" begin="3.68s" repeatCount="indefinite"/>
+    </circle>
+    <g transform="translate(905 228)">
+      <circle r="58" fill="url(#core)" opacity=".35"><animate attributeName="r" values="52;62;52" dur="3.2s" repeatCount="indefinite"/></circle>
+      <circle r="46" fill="#0B1430" stroke="url(#brand)" stroke-width="2.5"/>
+      <text y="-4" text-anchor="middle" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#E6EDF7">Cycle</text>
+      <text y="15" text-anchor="middle" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#E6EDF7">fees</text>
+    </g>
+    <text x="905" y="308" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace" font-size="12" fill="#5F6E8C">LaunchLab · CPMM · Burn &amp; Earn</text>
+    <g transform="translate(1098 70)">
+      <rect width="150" height="44" rx="12" fill="#0B1430" stroke="#5EEAD4" stroke-opacity=".55"/>
+      <circle cx="20" cy="22" r="6" fill="#5EEAD4"/>
+      <text x="34" y="27" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6EDF7">Holders</text>
+      <text x="136" y="27" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#5EEAD4">15%</text>
+    </g><g transform="translate(1098 138)">
+      <rect width="150" height="44" rx="12" fill="#0B1430" stroke="#FBBF24" stroke-opacity=".55"/>
+      <circle cx="20" cy="22" r="6" fill="#FBBF24"/>
+      <text x="34" y="27" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6EDF7">Creator</text>
+      <text x="136" y="27" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#FBBF24">5%</text>
+    </g><g transform="translate(1098 206)">
+      <rect width="150" height="44" rx="12" fill="#0B1430" stroke="#F472B6" stroke-opacity=".55"/>
+      <circle cx="20" cy="22" r="6" fill="#F472B6"/>
+      <text x="34" y="27" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6EDF7">Flagship</text>
+      <text x="136" y="27" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#F472B6">35%</text>
+    </g><g transform="translate(1098 274)">
+      <rect width="150" height="44" rx="12" fill="#0B1430" stroke="#38BDF8" stroke-opacity=".55"/>
+      <circle cx="20" cy="22" r="6" fill="#38BDF8"/>
+      <text x="34" y="27" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6EDF7">Traders</text>
+      <text x="136" y="27" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#38BDF8">35%</text>
+    </g><g transform="translate(1098 342)">
+      <rect width="150" height="44" rx="12" fill="#0B1430" stroke="#A78BFA" stroke-opacity=".55"/>
+      <circle cx="20" cy="22" r="6" fill="#A78BFA"/>
+      <text x="34" y="27" font-family="Inter, ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#E6EDF7">Treasury</text>
+      <text x="136" y="27" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace" font-size="14" fill="#A78BFA">10%</text>
+    </g>
+  </g>
+</svg>
