@@ -448,5 +448,4 @@ This repository is released under the [MIT License](LICENSE), with the exception
 <br/>
 <img src="assets/float.jpg" width="56" alt="Float Community logo"/>
 <br/>
-<sub>An independent, community-maintained project. Not affiliated with Float.</sub>
 </div>
