@@ -1,0 +1,9 @@
+float-community
+Copyright (c) 2026 float-community contributors
+
+This product includes software developed by Raydium
+(https://github.com/raydium-io/raydium-cp-swap), licensed under the
+Apache License, Version 2.0. See vendor/raydium/cp-swap-src/LICENSE.
+
+Raydium LaunchLab and CPMM Anchor IDL files are reproduced from
+https://github.com/raydium-io/raydium-idl.
