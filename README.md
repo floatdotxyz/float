@@ -433,10 +433,9 @@ npm run check && cargo test -p float-core && anchor build && node scripts/dev/ch
 
 Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request. The project follows four guiding principles:
 
-1. The official Float documentation is the source of truth.
-2. The behavior of the Float program is never assumed or inferred.
-3. The SDK remains free of runtime dependencies.
-4. Vendored files are kept verbatim.
+1. The behavior of the Float program is never assumed or inferred.
+2. The SDK remains free of runtime dependencies.
+3. Vendored files are kept verbatim.
 
 <br/>
 
@@ -444,11 +443,10 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before
 
 This repository is released under the [MIT License](LICENSE), with the exception of `vendor/raydium/cp-swap-src`, which is distributed under the Apache License 2.0 (see [NOTICE](NOTICE)).
 
-"Float", "$FLOAT" and "Raydium" are the property of their respective owners and are referenced solely to describe the systems this project interoperates with.
 
 <div align="center">
 <br/>
-<img src="assets/logo.svg" width="56" alt="Float Community logo"/>
+<img src="assets/float.jpg" width="56" alt="Float Community logo"/>
 <br/>
 <sub>An independent, community-maintained project. Not affiliated with Float.</sub>
 </div>
