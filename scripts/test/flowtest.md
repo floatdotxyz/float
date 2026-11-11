@@ -16,12 +16,10 @@
 | :-- | :-- |
 | Name | Flow |
 | Ticker | `$FLOW` |
-| Mint | `<FLOW_MINT_ADDRESS>` *(not yet deployed; this is the only place the mint will be published)* |
+| Mint | `FLTSwEh5fNfXLh3HXGq7Ppiiw5i76HCXc2a5txecF4sr`|
 | Mint authority | Revoked at launch |
 | Freeze authority | Revoked at launch |
 
-> [!CAUTION]
-> Until the fields above are filled in **in this repository**, any "$FLOW" token you see trading is not this one.
 
 <br/>
 
