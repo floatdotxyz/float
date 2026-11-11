@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="#flow-token"><img src="./assets/flow-banner.svg" alt="Flow by Float · $FLOW: move a pump.fun coin's community and liquidity to Float" width="100%"/></a>
+<a href="#flow-token"><img src="flow-banner.svg" alt="Flow by Float · $FLOW: move a pump.fun coin's community and liquidity to Float" width="100%"/></a>
 
 # Flow by Float · $FLOW
 
@@ -51,7 +51,6 @@ The outcome for a committer is **economically equal to selling at the average un
 7. [Security model](#7-security-model)
 8. [Who should and shouldn't use Flow](#8-who-should-and-shouldnt-use-flow)
 9. [Test phase](#9-test-phase)
-10. [FAQ](#10-faq)
 - [References](#references)
 
 <br/>
