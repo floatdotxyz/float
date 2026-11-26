@@ -113,7 +113,7 @@ pub fn cycle_launchlab(ctx: Context<CycleLaunchLab>) -> Result<()> {
     let claimed = ctx.accounts.intake.amount.checked_sub(before).ok_or(RouterError::MathOverflow)?;
     require!(claimed > 0, RouterError::NoFees);
 
-    let a = &mut ctx.accounts;
+    let a = &mut *ctx.accounts;
     let decimals = a.paired_mint.decimals;
     let mint = a.coin_record.mint;
     route_fees(
@@ -241,7 +241,7 @@ pub fn cycle_cpmm(ctx: Context<CycleCpmm>) -> Result<()> {
 
     ctx.accounts.authority_token_0.reload()?;
     ctx.accounts.authority_token_1.reload()?;
-    let a = &mut ctx.accounts;
+    let a = &mut *ctx.accounts;
     let d0 = a.authority_token_0.amount.checked_sub(b0).ok_or(RouterError::MathOverflow)?;
     let d1 = a.authority_token_1.amount.checked_sub(b1).ok_or(RouterError::MathOverflow)?;
     let (paired_delta, base_delta) = if paired_is_0 { (d0, d1) } else { (d1, d0) };
@@ -382,7 +382,7 @@ pub fn swap_base_fees(ctx: Context<SwapBaseFees>, amount_in: u64, reference_pric
     )?;
 
     ctx.accounts.intake.reload()?;
-    let a = &mut ctx.accounts;
+    let a = &mut *ctx.accounts;
     let received = a.intake.amount.checked_sub(before).ok_or(RouterError::MathOverflow)?;
     guard::check(received, amount_in, reference_price_q64, a.config.guard_bps).core()?;
     a.coin_record.pending_base_fees -= amount_in;
