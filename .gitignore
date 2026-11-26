@@ -1,0 +1,22 @@
+# Dependencies and build output
+node_modules/
+target/
+.anchor/
+test-ledger/
+
+# Secrets: never commit keypairs or environment files
+*-keypair.json
+.env
+.env.*
+
+# Bot and script output (runtime state, may contain wallet data)
+*.ledger.json
+airdrop-*.json
+prices.json
+
+# Shared test vectors are committed even when their name matches a pattern above
+!crates/float-core/tests/fixtures/*.json
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
